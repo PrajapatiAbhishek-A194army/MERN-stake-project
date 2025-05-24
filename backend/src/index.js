@@ -30,6 +30,6 @@ if(process.env.NODE_ENV==="production"){
   })
 }
 server.listen(PORT, () => {
-  console.log(`surver is running at http://localhost:${PORT}`);
+  console.log(`surver is running at ${PORT}`);
   connectDB();
 });
