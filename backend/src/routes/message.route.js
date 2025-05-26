@@ -1,6 +1,7 @@
 import express from "express"
 import { protectRoute } from "../../middleware/auth.middleware.js";
 import { getMessages, getUsersForSidebar, sendMessage } from "../controllers/message.controller.js";
+import mongoose from "mongoose";
 const router=express.Router();
 router.param("id", (req, res, next, id) => {
   if (!mongoose.Types.ObjectId.isValid(id)) {
